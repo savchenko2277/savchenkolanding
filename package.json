@@ -60,13 +60,14 @@
 		"from": "src/**/[^-]*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened,svg,sprite,swiper,mb,container,main,btn,open,title,defoult,show,current,input,icon,selected",
+		"omit": "@@,js-,active,opened,svg,sprite,swiper,mb,container,main,btn,open,title,defoult,show,current,input,icon,selected,liquid-,glass",
 		"prefix": "@use 'lib' as *;",
 		"suffix": "$self: &;"
 	},
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.36",
 		"imask": "^7.6.1",
+		"inputmask": "^5.0.9",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.2.0",
 		"swiper": "^11.2.5"

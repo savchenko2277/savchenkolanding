@@ -1,9 +1,191 @@
-@@include("_head.html", {"id":"home"}) 
-@@include("_header.html") 
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
 
-<main class="main"> 
+<main class="main">
 
-</main> 
+    <section class="promo">
+        <div class="promo__container container">
+            <div class="promo__content">
+                <img src="./img/logo-big.svg" alt="" class="promo__logo">
+                <h1 class="promo__title title">
+                    Привет, я Антон —
+                    <strong
+                        class="text-animated text-animated_color text-animated_color-silver"><span>f</span><span>r</span><span>o</span><span>n</span><span>t</span><span>e</span><span>n</span><span>d</span></strong>
+                    разработчик <br>
+                    Создаю сайты, которые <br>
+                    не просто работают, а цепляют.
+                </h1>
+                <button type="button" class="promo__btn btn-glass liquid-hover btn-unavailable">
+                    <span>Написать мне</span>
+                </button>
+            </div>
+        </div>
+        <div class="promo__background">
+            <img src="./img/main-image.webp" alt="promo-image">
+        </div>
+    </section>
 
-<!-- @@include("_modals.html") -->
+    <section class="about">
+        <div class="about__container container">
+            <h2 class="about__title title title-48">Обо мне</h2>
+            <div class="about__text">
+                <p>
+                    Занимаюсь фронтенд-разработкой с 2023 года. В работе использую современные технологии и подходы,
+                    стремлюсь к чистому, масштабируемому коду и точному соответствию дизайну. Есть опыт участия в
+                    крупных проектах — от лендингов до сложных интерфейсов. Всегда укладываюсь в сроки, точно следую
+                    техническому заданию и внимательно отношусь к деталям.
+                </p>
+                <p>
+                    Помимо разработки, имею базовые навыки веб-дизайна — это помогает лучше понимать визуальные задачи и
+                    адаптировать макеты под реальные сценарии. Работаю быстро, аккуратно и нацелен на результат, который
+                    будет удобен как пользователям, так и заказчику.
+                </p>
+                <p>
+                    Постоянно развиваюсь, слежу за трендами и экспериментирую с новыми инструментами. Для меня важно не
+                    просто "сделать как на макете", а понять суть задачи и найти оптимальное решение. Ценю честность в
+                    коммуникации, открытость к правкам и продуктивную обратную связь — именно так рождаются сильные
+                    проекты.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech">
+        <div class="tech__container container">
+            <h2 class="tech__title title title-48">Технологии</h2>
+            <h5 class="tech__subtitle title">Мой рабочий арсенал: всё, что нужно, чтобы сайт был не только красивым, но
+                и работал как часы</h5>
+
+            <div class="tech__cases">
+                <div class="tech__case glass liquid-hover">
+                    <img src="./img/logotypes/git.svg" alt="" class="tech__case-image">
+                    <h5 class="tech__case-title title title-32">Git</h5>
+                    <p class="tech__case-text">
+                        Контроль версий и работа с репозиториями
+                    </p>
+                </div>
+                <div class="tech__case glass liquid-hover">
+                    <img src="./img/logotypes/html5.webp" alt="" class="tech__case-image">
+                    <h5 class="tech__case-title title title-32">HTML5</h5>
+                    <p class="tech__case-text">
+                        Семантичная и чистая вёрстка
+                    </p>
+                </div>
+                <div class="tech__case glass liquid-hover">
+                    <img src="./img/logotypes/sass.webp" alt="" class="tech__case-image">
+                    <h5 class="tech__case-title title title-32">SCSS / SASS</h5>
+                    <p class="tech__case-text">
+                        Структурированные стили с переменными
+                    </p>
+                </div>
+                <div class="tech__case glass liquid-hover">
+                    <img src="./img/logotypes/js.webp" alt="" class="tech__case-image">
+                    <h5 class="tech__case-title title title-32">JavaScript</h5>
+                    <p class="tech__case-text">
+                        Логика, интерактив, динамика
+                    </p>
+                </div>
+                <div class="tech__case glass liquid-hover">
+                    <img src="./img/logotypes/figma.webp" alt="" class="tech__case-image">
+                    <h5 class="tech__case-title title title-32">Figma</h5>
+                    <p class="tech__case-text">
+                        UI-дизайн и работа с макетами
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="projects">
+        <div class="projects__container container">
+            <h2 class="projects__title title title-48">Проекты</h2>
+            <h4 class="projects__subtitle title">В этом разделе собраны мои последние проекты</h4>
+            <div class="projects__cases">
+                <div class="projects__case glass">
+                    <div class="projects__case-image">
+                        <img src="./img/projects/servera.webp" alt="">
+                    </div>
+                    <div class="projects__case-info">
+                        <h5 class="projects__case-title title title-32">Хостинг Сервера</h5>
+                        <div class="projects__case-bottom">
+                            <a target="_blank" href="https://web.savchenko-frontend.ru/servera" class="projects__case-btn btn-glass liquid-hover">Перейти к
+                                проекту</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__case glass">
+                    <div class="projects__case-image">
+                        <img src="./img/projects/parad.webp" alt="">
+                    </div>
+                    <div class="projects__case-info">
+                        <h5 class="projects__case-title title title-32">Кухни Парад</h5>
+                        <div class="projects__case-bottom">
+                            <a target="_blank" href="https://web.savchenko-frontend.ru/parad" class="projects__case-btn btn-glass liquid-hover">Перейти к
+                                проекту</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__case glass">
+                    <div class="projects__case-image">
+                        <img src="./img/projects/mastertour.webp" alt="">
+                    </div>
+                    <div class="projects__case-info">
+                        <h5 class="projects__case-title title title-32">Мастер Тур</h5>
+                        <div class="projects__case-bottom">
+                            <a target="_blank" href="https://web.savchenko-frontend.ru/mastertour/main.html" class="projects__case-btn btn-glass liquid-hover">Перейти к
+                                проекту</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__case glass">
+                    <div class="projects__case-image">
+                        <img src="./img/projects/fourhorse.webp" alt="">
+                    </div>
+                    <div class="projects__case-info">
+                        <h5 class="projects__case-title title title-32">Четыре коня</h5>
+                        <div class="projects__case-bottom">
+                            <a target="_blank" href="https://web.savchenko-frontend.ru/fourhorse/" class="projects__case-btn btn-glass liquid-hover">Перейти к
+                                проекту</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="https://web.savchenko-frontend.ru/" class="projects__btn btn-glass liquid-hover btn-unavailable">
+                <span>Все проекты</span>
+            </a>
+        </div>
+    </section>
+
+    <section data-callback-js class="callback">
+        <div class="callback__bg">
+            <img loading="lazy" alt="image" src="./img/uzor.webp">
+        </div>
+        <div class="callback__container container">
+            <h2 class="callback__title title title-48">Оставить заявку</h2>
+            <p class="callback__desc">
+                Если Вы заинтересованы в услуге верстальщика, можете оставить заявку и я свяжусь с Вами в течении часа.
+                <b>Рабочее время с 9:00 до 18:00 по МСК</b>
+            </p>
+            <form action="#" class="callback__form glass">
+                <label class="callback__label">
+                    <input type="text" class="callback__input input-glass" placeholder="Ваше имя">
+                </label>
+                <label class="callback__label">
+                    <input type="text" class="callback__input input-glass callback__input-contact" placeholder="Ваш контакт (Номер телефона / E-mail / Telegram)">
+                </label>
+                <label class="callback__label">
+                    <input type="text" class="callback__input input-glass" placeholder="Ваш бюджет (По желанию)">
+                </label>
+                <label class="callback__label">
+                    <textarea type="text" class="callback__input input-glass" placeholder="Комментарий (По желанию)"></textarea>
+                </label>
+                <button class="callback__btn btn-glass liquid-hover" type="submit" aria-label="Отправить заявку">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+@@include("_popups.html")
 @@include("_bottom.html")

@@ -1,0 +1,126 @@
+@use 'lib' as *;
+
+.projects {
+	$self: &;
+
+    padding: fluid(96px, 48px) 0px;
+
+	&__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+	}
+
+    &__subtitle {
+        font-size: fluid(22px, 16px);
+        color: var(--color-text);
+        margin-bottom: 64px;
+    }
+
+	&__title {
+        margin-bottom: 48px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+	}
+
+	&__cases {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: fluid(32px, 24px);
+        width: 100%;
+
+        @include media("<=lg") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media("<=sm") {
+            grid-template-columns: 100%;
+        }
+	}
+
+	&__case {
+        position: relative;
+        display: flex;
+        min-height: 300px;
+        padding: 24px;
+        overflow: hidden;
+        border-radius: 16px;
+	}
+
+	&__case-image {
+        position: absolute;
+        inset: 0;
+        width: 100%; height: 100%;
+        overflow: hidden;
+        z-index: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            width: 100%; height: 100%;
+            background: rgba($color: #000000, $alpha: 0.3);
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            transition: transform 5s ease-in-out;
+        }
+	}
+
+    @include media(">lg") {
+        &__case:hover &__case-info {
+            grid-template-rows: max-content 1fr;
+        }
+
+        &__case:hover &__case-title {
+            margin-bottom: 12px;
+        }
+
+        &__case:hover &__case-image img {
+            transform: translateY(calc(-100% + 300px));
+        }
+    }
+
+	&__case-info {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        margin-top: auto;
+        display: grid;
+        grid-template-rows: max-content 0fr;
+        transition: grid-template-rows var(--transition);
+
+        @include media("<=lg") {
+            grid-template-rows: max-content 1fr;
+        }
+	}
+
+    &__case-bottom {
+        overflow: hidden;
+        width: 100%;
+    }
+
+	&__case-title {
+        transition: margin-bottom var(--transition);
+
+        @include media("<=lg") {
+            margin-bottom: 16px;
+        }
+	}
+
+    &__case-btn:hover &__case-bottom {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+    }
+
+	&__case-btn.btn-glass {
+        font-size: 14px;
+        box-shadow: none;
+        width: 100%;
+	}
+
+}

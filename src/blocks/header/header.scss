@@ -1,0 +1,218 @@
+@use 'lib' as *;
+
+.header {
+    $self: &;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    color: var(--color-white);
+    padding-top: 15px;
+    pointer-events: none;
+
+    @include media("<=md") {
+        height: 100%;
+        padding: 15px 0px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__bar.glass {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: fluid(48px, 24px);
+        padding: 8px 20px;
+        transition: margin var(--transition);
+        pointer-events: all;
+        flex: 0 0 auto;
+
+        @include media("<=md") {
+            margin-bottom: 12px;
+            padding: 8px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @include media("<=md") {
+            flex-direction: column;
+        }
+    }
+
+    &__nav-link {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 16px 24px;
+        border-radius: 16px;
+        overflow: hidden;
+        color: var(--color-white);
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%),
+                    rgba(255, 255, 255, .25),
+                    rgba(255, 255, 255, .05) 70%);
+            backdrop-filter: blur(16px) saturate(140%);
+            -webkit-backdrop-filter: blur(16px) saturate(140%);
+            border: 1px solid rgba(255, 255, 255, .15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            opacity: 0;
+            transition: opacity var(--transition);
+            z-index: -1;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        @include media("<=md") {
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+
+    &__socials {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__social-link {
+        flex: 0 0 auto;
+        position: relative;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-white);
+            transition: fill var(--transition);
+        }
+
+        &:hover {
+            svg {
+                fill: var(--color-accent);
+            }
+        }
+    }
+
+    &__logo {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        animation: waveEffect 5s infinite ease-in;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__menu {
+        @include media(">md") {
+            display: none;
+        }
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all var(--transition);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 32px;
+        overflow-y: auto;
+    }
+
+    &__menu.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__burger.active {
+        span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+        }
+    }
+
+    &__burger {
+        width: 48px;
+        height: 48px;
+        background: var(--blue-gradient);
+        padding: 12px;
+        position: relative;
+        z-index: 100;
+        border-radius: 14px;
+
+        @include media(">md") {
+            display: none;
+        }
+
+        span {
+            display: block;
+            background-color: var(--white);
+            height: 2px;
+            width: 100%;
+            border-radius: 1px;
+            transition: all var(--transition);
+            background-color: #fff;
+        }
+
+        span {
+            position: absolute;
+            width: calc(100% - 20px);
+            left: 50%;
+        }
+
+        span:nth-child(1) {
+            top: 12px;
+            transform: translateX(-50%);
+        }
+
+        span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        span:nth-child(3) {
+            top: calc(100% - 12px);
+            transform: translateX(-50%);
+        }
+
+    }
+
+}

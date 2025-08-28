@@ -1,0 +1,32 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+
+    padding: fluid(96px, 48px) 0px;
+
+	&__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+
+	&__title {
+        text-transform: uppercase;
+        margin-bottom: fluid(48px, 32px);
+	}
+
+	&__text {
+        font-size: fluid(22px, 16px);
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+
+        p {
+            margin: 0;
+        }
+	}
+
+}

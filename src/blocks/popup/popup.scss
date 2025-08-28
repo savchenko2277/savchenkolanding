@@ -1,0 +1,50 @@
+@use 'lib' as *;
+
+.popup {
+	$self: &;
+
+    position: fixed;
+    bottom: 20px; right: 20px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(100%);
+    transition: all var(--transition);
+    max-width: calc(100% - 40px);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+
+    &.glass {
+        padding: 16px 32px;
+    }
+
+	&__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        &--row {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        img {
+            width: 24px; height: 24px;
+        }
+	}
+
+	&__text {
+        margin: 0;
+        font-size: fluid(16px, 14px);
+        flex: 1 1 auto;
+        max-width: 400px;
+	}
+
+}

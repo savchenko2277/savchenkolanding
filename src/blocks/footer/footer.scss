@@ -1,0 +1,19 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+
+    &.glass {
+        border-radius: 24px 24px 0px 0px;
+        margin-top: fluid(96px, 48px);
+    }
+
+	&__container {
+
+	}
+
+    &__text {
+        margin: 0;
+    }
+
+}

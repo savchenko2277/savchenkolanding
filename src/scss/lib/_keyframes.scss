@@ -1,0 +1,14 @@
+@keyframes waveEffect {
+    0% {
+        transform: translateX(0%) rotate(0deg);
+    }
+    25% {
+        transform: translateX(5%) rotate(5deg);
+    }
+    75% {
+        transform: translateX(-5%) rotate(-5deg);
+    }
+    100% {
+        transform: translateX(0%) rotate(0deg);
+    }
+}

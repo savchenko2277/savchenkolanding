@@ -1,1 +1,32 @@
-<header class="header"></header>
+<header data-header-js class="header header_scroll">
+    <div class="header__container container">
+        <div class="header__bar glass">
+             <div class="header__logo">
+                <img src="./img/logo.svg" alt="">
+            </div>
+            <nav class="header__nav header__menu-element">
+                <a class="header__nav-link liquid-hover" href="#about">Обо мне</a>
+                <a class="header__nav-link liquid-hover" href="#tech">Технологии</a>
+                <a class="header__nav-link liquid-hover" href="#projects">Проекты</a>
+                <a class="header__nav-link liquid-hover" href="#callback">Обратная связь</a>
+            </nav>
+            <div class="header__socials header__menu-element">
+                <a target="_blank" href="https://github.com/savchenko2277" class="header__social-link">
+                    <svg><use xlink:href="#Github"></use></svg>
+                </a>
+                <a target="_blank" href="https://t.me/savchenko7002" class="header__social-link"><svg>
+                    <use xlink:href="#Telegram"></use></svg>
+                </a>
+                <a target="_blank" href="https://wa.me/+995591107485" class="header__social-link">
+                    <svg><use xlink:href="#Whatsapp"></use></svg>
+                </a>
+            </div>
+           <button type="button" aria-label="Открыть меню" class="header__burger btn-glass">
+                <span></span>
+                <span></span>
+                <span></span>
+           </button>
+        </div>
+        <div class="header__menu glass"></div>
+    </div>
+</header>

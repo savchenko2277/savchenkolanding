@@ -9,8 +9,7 @@
 		'xlg': 1280px,
 		'xxlg': 1440px,
 		'xxxlg': 1680px,
-		'xxxxlg': 1928px,
-		'container-with-padding': calc(1320px + 24px * 2)
+		'xxxxlg': 1928px
 	)
 );
 
@@ -19,8 +18,7 @@
 @use "../../node_modules/swiper/modules/effect-fade";
 @use "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
 
-@include font-face("Helvetica", "HT", 400);
-@include font-face("TTFirsTextTrialMedium", "TT", 500);
+
 
 // Browsersync mark
 #__bs_notify__ { 
@@ -35,10 +33,10 @@ body, html {
 	// scrollbar-gutter: stable;
 	// scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: var(--background);
+	background-color: var(--color-bg);
 	font-size: var(--size);
-	color: var(--main-black);
-	font-family: "HT", sans-serif;
+	color: var(--color-text);
+	font-family: "Manrope", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;
@@ -64,7 +62,11 @@ em { font-style: italic; }
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	width: min(var(--container), calc(100% - 12px * 2));
+	width: min(var(--container), calc(100% - 24px * 2));
+
+    @include media("<=xs") {
+        width: min(var(--container), calc(100% - 16px * 2));
+    }
 	
 	&_abs {
 		position: absolute;

@@ -1,0 +1,80 @@
+@use 'lib' as *;
+
+.tech {
+	$self: &;
+
+    padding: fluid(96px, 48px) 0px;
+    background: var(--color-block);
+
+	&__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+	}
+
+	&__title {
+        margin-bottom: 24px;
+        text-transform: uppercase;
+	}
+
+	&__subtitle {
+        font-size: fluid(22px, 16px);
+        color: var(--color-text);
+        margin-bottom: 64px;
+	}
+
+    &__cases {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1360px;
+        justify-content: center;
+        gap: fluid(24px, 16px);
+        margin: 0 auto;
+
+        @include media("<=xlg") {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include media("<=lg") {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media("<=sm") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media("<=xs") {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__case {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        text-align: center;
+        max-width: 280px;
+        width: 100%;
+
+        @include media("<=xs") {
+            margin: 0 auto;
+        }
+    }
+
+    &__case-image {
+        height: 96px;
+        width: 100%;
+        background: var(--color-white);
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 24px;
+        object-fit: contain;
+    }
+
+    &__case-title {
+        margin-bottom: 16px;
+    }
+
+}
